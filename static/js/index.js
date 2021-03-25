@@ -18,9 +18,6 @@ function cambio()
  		}
 	client.send(message);
 	}
-}
-
-
 
 
 
