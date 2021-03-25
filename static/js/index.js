@@ -70,12 +70,12 @@ function cambio()
 	  document.getElementById("sensor").innerHTML=message.payloadString;
           if(message.payloadString==='Encendido'){
                    document.getElementById("imagen").src="https://www.jing.fm/clipimg/full/114-1141391_homer-simpson-fighting-clipart-homer-simpson-bart-simpson.png";
-	  } else if (message.payloadString'Apagado'){
+	  } else if (message.payloadString==='Apagado'){
                 document.getElementById("imagen").src="https://i.pinimg.com/736x/db/e0/3b/dbe03b8735e70b6461278393c5769258.jpg ";
 	  }
 	  if(message.payloadString==='Encendido'){
                   document.getElementById("btn").innerHTML="Apagar";
-	  }else if (message.payloadString'Apagado'){
+	  }else if (message.payloadString==='Apagado'){
                   document.getElementById("btn").innerHTML="Encender";
 	  }
 	    
