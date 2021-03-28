@@ -2,23 +2,21 @@
 
 var btn=document.getElementById('btn'),contador=0;
 function cambio()
-	{if (contador==0)
-		{
-		message = new Paho.MQTT.Message("ENCENDER");
- 		message.destinationName = "grace.bonilla@unach.edu.ec/tema1";
- 		client.send(message);
- 		contador=1;
- 		}
- 	else
- 		{
- 		message = new Paho.MQTT.Message("APAGAR");
-		message.destinationName = "grace.bonilla@unach.edu.ec/tema1";
-		client.send(message);
- 		contador=0;
- 		}
+{if (contador==0)
+	{
+	message = new Paho.MQTT.Message("ENCENDER");
+ 	message.destinationName = "grace.bonilla@unach.edu.ec/tema1";
+ 	client.send(message);
+ 	contador=1;
+ 	}
+ else
+ 	{
+ 	message = new Paho.MQTT.Message("APAGAR");
+	message.destinationName = "grace.bonilla@unach.edu.ec/tema1";
 	client.send(message);
-	}
-
+ 	contador=0;
+ 	}
+}
 
 
 // Create a client instance
