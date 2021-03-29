@@ -44,7 +44,7 @@ function cambio()
     console.log("Conectado...");
 	
     client.subscribe("grace.bonilla@unach.edu.ec/tema1");
-    //message = new Paho.MQTT.Message("hola desde la web");
+    message = new Paho.MQTT.Message("hola desde la web");
     message.destinationName = "grace.bonilla@unach.edu.ec/tema1";
     client.send(message);
 	
