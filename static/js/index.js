@@ -67,9 +67,9 @@ function cambio()
     console.log("onMessageArrived:"+message.payloadString);
 	  document.getElementById("sensor").innerHTML=message.payloadString;
           if(message.payloadString==='ENCENDER'){
-                   document.getElementById("imagen").src="/static/images/led_encendido.jpg" alt="user" width="400px";
+                   document.getElementById("imagen").src="https://aprendecomohacerlo.com/wp-content/uploads/2021/02/quitar-led-rojo-encendido-huawei.jpg";
 	  } else if (message.payloadString==='APAGAR'){
-                document.getElementById("imagen").src="/static/images/led_apagado.jpg" alt="user" width="400px";
+                document.getElementById("imagen").src="https://i.ebayimg.com/images/g/mq0AAOSwETJaHXHd/s-l300.jpg ";
 	  }
 	  if(message.payloadString==='ENCENDER'){
                   document.getElementById("btn").innerHTML="Apagar";
