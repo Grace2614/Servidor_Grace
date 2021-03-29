@@ -44,7 +44,7 @@ function cambio()
     console.log("Conectado...");
 	
     client.subscribe("grace.bonilla@unach.edu.ec/tema1");
-    message = new Paho.MQTT.Message("hola desde la web");
+    //message = new Paho.MQTT.Message("hola desde la web");
     message.destinationName = "grace.bonilla@unach.edu.ec/tema1";
     client.send(message);
 	
@@ -67,9 +67,9 @@ function cambio()
     console.log("onMessageArrived:"+message.payloadString);
 	  document.getElementById("sensor").innerHTML=message.payloadString;
           if(message.payloadString==='ENCENDER'){
-                   document.getElementById("imagen").src="https://www.jing.fm/clipimg/full/114-1141391_homer-simpson-fighting-clipart-homer-simpson-bart-simpson.png";
+                   document.getElementById("imagen").src="/static/images/led_encendido.jpg" alt="user" width="400px";
 	  } else if (message.payloadString==='APAGAR'){
-                document.getElementById("imagen").src="https://i.pinimg.com/736x/db/e0/3b/dbe03b8735e70b6461278393c5769258.jpg ";
+                document.getElementById("imagen").src="/static/images/led_apagado.jpg" alt="user" width="400px";
 	  }
 	  if(message.payloadString==='ENCENDER'){
                   document.getElementById("btn").innerHTML="Apagar";
